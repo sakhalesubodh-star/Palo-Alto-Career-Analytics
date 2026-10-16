@@ -13,10 +13,11 @@ st.set_page_config(
 )
 
 # ---------------- LOAD DATA ----------------
-DATA_FOLDER = Path(
-    r"C:\Users\nhp\Documents\Palo_Alto_Career_Analytics\Data"
-)
-DATA_PATH = DATA_FOLDER / "Palo Alto Networks.csv"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
+DATA_PATH = BASE_DIR / "Palo_Alto_Final_Analysis.csv"
 
 
 @st.cache_data
